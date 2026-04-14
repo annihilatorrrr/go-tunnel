@@ -210,7 +210,7 @@ func TestQuicAuthToTls(t *testing.T) {
 	cpool := x509.NewCertPool()
 	cpool.AddCert(pkic.ca)
 
-	cfg := quicSetup(8020, 8021)
+	cfg := quicSetup(18020, 18021)
 	lc := cfg.Listen[0]
 
 	cert, err := pki.ServerCert("server.name", lc.Addr)

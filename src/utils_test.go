@@ -23,6 +23,7 @@ import (
 
 func newAsserter(t *testing.T) func(cond bool, msg string, args ...interface{}) {
 	return func(cond bool, msg string, args ...interface{}) {
+		t.Helper()
 		if cond {
 			return
 		}
